@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Fullstack Academy - JavaSE - Basic Knowledge, Ruoyu">
+    <meta name="keywords" content="博客的迁移, Ruoyu">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Fullstack Academy - JavaSE - Basic Knowledge | Ruoyu</title>
+    <title>博客的迁移 | Ruoyu</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -216,12 +216,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/../images/Fullstack%20Academy.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <!-- <div class="brand">
-                    <h1 class="description center-align post-title">Fullstack Academy - JavaSE - Basic Knowledge</h1>
+                    <h1 class="description center-align post-title">博客的迁移</h1>
                 </div> -->
             </div>
         </div>
@@ -346,8 +346,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/java/">
-                                <span class="chip bg-color">java</span>
+                            <a href="/tags/Hexo/">
+                                <span class="chip bg-color">Hexo</span>
                             </a>
                         
                     </div>
@@ -358,8 +358,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Fullstack-Academy/" class="post-category">
-                                Fullstack Academy
+                            <a href="/categories/Development-Environment/" class="post-category">
+                                Development Environment
                             </a>
                         
                     </div>
@@ -371,7 +371,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-10-05
+                    2020-11-23
                 </div>
                 
 
@@ -380,14 +380,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    796
+                    105
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -402,93 +402,24 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="1-计算机的基本概念"><a href="#1-计算机的基本概念" class="headerlink" title="1. 计算机的基本概念"></a>1. 计算机的基本概念</h3><p>计算机概念：用于高级计算，使用广泛的<strong>设备</strong>，由硬件和软件组成。</p>
-<ul>
-<li>硬件：客观存在的相关设备</li>
-<li>软件：用于控制各种硬件设备完成各种功能</li>
-</ul>
-<h4 id="常见的主要硬件"><a href="#常见的主要硬件" class="headerlink" title="常见的主要硬件"></a>常见的主要硬件</h4><p>计算机硬件主要包括： 中央处理器(CPU)，内存，硬盘，输入输出设备，主板，机箱和电源。</p>
-<h5 id="主要硬件的详解"><a href="#主要硬件的详解" class="headerlink" title="主要硬件的详解"></a>主要硬件的详解</h5><ul>
-<li><p>CPU -中央处理器(Central Processing Unit)</p>
-<p>-计算机的核心部件，类似于人的大脑</p>
-<p>-计算机的运算核心和控制中心，所有运算由CPU完成 </p>
-<p>-解释计算机指令以及处理计算机软件中的数据</p>
+                <h2 id="数据迁移"><a href="#数据迁移" class="headerlink" title="数据迁移"></a>数据迁移</h2><p>复制旧电脑上的文件，只需复制以下几个：</p>
+<pre><code>_config.yml
+package.json
+scaffolds/
+source/
+themes/</code></pre><p>把上述文件加载到新的博客管理文件夹中.</p>
+<h2 id="环境搭建及部署"><a href="#环境搭建及部署" class="headerlink" title="环境搭建及部署"></a>环境搭建及部署</h2><ol>
+<li><p>进入博客目录，依次执行以下命令：</p>
+<pre><code>npm install
+npm install hexo-deployer-git --save</code></pre></li>
+<li><p>检验：</p>
+<pre><code>hexo g
+hexo s</code></pre><p>此时可访问浏览器：<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 就可以看到博客了.</p>
 </li>
-<li><p>内存 -计算机的存储部件，也被称为内存储器(memory)</p>
-<p>-用于<strong>暂时</strong>CPU中的运算数据，以及与硬盘等外部存储器交换的数据</p>
-<p>-CPU可直接访问内存的数据，且效率较高 </p>
-<p>-容量小且不能永久储存，一旦断电会造成数据丢失</p>
+<li><p>部署</p>
+<pre class=" language-hexo"><code class="language-hexo">hexo g -d</code></pre>
 </li>
-<li><p>硬盘 -计算机中的存储部件</p>
-<p>-在内存中点击<code>Ctrl + S</code>后数据进入硬盘</p>
-<p>-永久储存，容量大且断电不丢失</p>
-<p>-CPU不能直接访问，需先加载到内存中</p>
-</li>
-</ul>
-<h4 id="主要软件的详解"><a href="#主要软件的详解" class="headerlink" title="主要软件的详解"></a>主要软件的详解</h4><p>计算机软件分为<strong>系统软件</strong>和<strong>应用软件</strong>，系统软件是操作系统，是其他软件的基础。</p>
-<p>主流操作系统：Windows/Unix/Linux/IOS/Android</p>
-<h3 id="2-计算机的体系结构"><a href="#2-计算机的体系结构" class="headerlink" title="2. 计算机的体系结构"></a>2. 计算机的体系结构</h3><p>自上而下：硬件👉操作系统内核(OS kernel)👉操作系统外壳(OS shell包括GUI/命令等)👉应用程序</p>
-<h3 id="3-计算机语言的发展"><a href="#3-计算机语言的发展" class="headerlink" title="3. 计算机语言的发展"></a>3. 计算机语言的发展</h3><ul>
-<li><p>第一代语言 机器语言</p>
-<p>-二进制代码形式存在，最开始使用穿孔卡片</p>
-</li>
-<li><p>第二代语言 汇编语言</p>
-<p>-使用助记符表示一条机器命令，如ADD，SUB等</p>
-</li>
-<li><p>高级语言</p>
-<p>-Java等</p>
-</li>
-</ul>
-<h3 id="4-Java的主要版本"><a href="#4-Java的主要版本" class="headerlink" title="4. Java的主要版本"></a>4. Java的主要版本</h3><ul>
-<li><p>Java SE 平台标准版</p>
-<p>-平台的基础</p>
-<p>-包含了运行Java所需的基础环境和核心类库</p>
-<p>-定义了基于桌面应用这样的基础类库</p>
-<p>-可以编写桌面应用</p>
-</li>
-<li><p>Java EE 平台企业版</p>
-<p>-基于SE构建企业级应用(企业级应用：为商业组织，大型企业而创建的应用系统)</p>
-</li>
-<li><p>Java ME 平台微型版</p>
-<p>-为机顶盒，移动电话和PDA等嵌入式消费电子设备提供Java解决方案</p>
-</li>
-</ul>
-<h3 id="5-JDK的相关文件"><a href="#5-JDK的相关文件" class="headerlink" title="5. JDK的相关文件"></a>5. JDK的相关文件</h3><ul>
-<li><p>bin -JDK工具命令</p>
-</li>
-<li><p>conf -配置文件</p>
-</li>
-<li><p>include -平台头文件</p>
-</li>
-<li><p>jmods -JKD模块</p>
-</li>
-<li><p>legal -授权文档</p>
-</li>
-<li><p>lib -补充jar包和源代码</p>
-</li>
-<li><p>其他</p>
-</li>
-<li><p>JDK -开发工具包 开发人员使用 <code>JDK = 编译器等开发工具 + JRE</code></p>
-</li>
-<li><p>JRE -提供了运行Java应用程序所必须的软件环境 用户使用 <code>JRE = 运行类库 + Java虚拟机(JVM)</code></p>
-</li>
-<li><p>JVM -中间解释器，由于JVM的存在实现跨平台</p>
-</li>
-<li><p>javac.exe -编译器，用于将高级Java源代码翻译成字节码文件</p>
-</li>
-<li><p>java.exe -解释器，用于启动JVM对字节码文件进行解释并执行</p>
-</li>
-</ul>
-<h3 id="6-常用开发工具"><a href="#6-常用开发工具" class="headerlink" title="6. 常用开发工具"></a>6. 常用开发工具</h3><ul>
-<li><p>文本编译器(TE，Text Editor)</p>
-<p>-记事本</p>
-<p>-Notepad++</p>
-</li>
-<li><p>集成开发环境(IDE, Integrated Development Environment)</p>
-<p>-IDEA</p>
-<p>-MyEclipse </p>
-</li>
-</ul>
+</ol>
 
             </div>
             <hr/>
@@ -514,7 +445,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://runkie.github.io/2020/10/05/fullstack-academy-javase-basic-knowledge/">http://runkie.github.io/2020/10/05/fullstack-academy-javase-basic-knowledge/</a>
+                    <a href="http://runkie.github.io/2020/11/23/shu-ju-qian-yi/">http://runkie.github.io/2020/11/23/shu-ju-qian-yi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -552,8 +483,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/java/">
-                                    <span class="chip bg-color">java</span>
+                                <a href="/tags/Hexo/">
+                                    <span class="chip bg-color">Hexo</span>
                                 </a>
                             
                         </div>
@@ -595,28 +526,79 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/10/08/fullstack-academy-javase-variables-and-data-types/">
+                <a href="/2020/11/23/shu-ju-qian-yi/">
                     <div class="card-image">
                         
-                        <img src="/../images/Fullstack%20Academy.jpg" class="responsive-img" alt="Fullstack Academy-JavaSE-Variables and Data types">
                         
-                        <span class="card-title">Fullstack Academy-JavaSE-Variables and Data types</span>
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="博客的迁移">
+                        
+                        <span class="card-title">博客的迁移</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            JavaSE Module 1 - Task 2 - Variables and Data types.
+                            重装系统或更换电脑时迁移博客
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-08
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-23
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Development-Environment/" class="post-category">
+                                    Development Environment
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Hexo/">
+                        <span class="chip bg-color">Hexo</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/05/01/fullstack-academy-javase-module-1-task-5-flow-control/">
+                    <div class="card-image">
+                        
+                        <img src="/../images/Fullstack%20Academy.jpg" class="responsive-img" alt="JavaSE Module 1 - Task 5 - Flow Control">
+                        
+                        <span class="card-title">JavaSE Module 1 - Task 5 - Flow Control</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            分支与循环
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-05-01
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -632,61 +614,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/java/">
-                        <span class="chip bg-color">java</span>
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
                     </a>
                     
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/01/01/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Github Page 搭建个人博客">
-                        
-                        <span class="card-title">Github Page 搭建个人博客</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            First post of my blog.
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-01-01
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Hexo-Git/" class="post-category">
-                                    Hexo, Git
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
-                    </a>
-                    
-                    <a href="/tags/GitPages/">
-                        <span class="chip bg-color">GitPages</span>
+                    <a href="/tags/Backend/">
+                        <span class="chip bg-color">Backend</span>
                     </a>
                     
                 </div>
@@ -876,7 +809,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">21.4k</span>&nbsp;字
+                class="white-color">21.5k</span>&nbsp;字
             
             
             
