@@ -1,0 +1,1520 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Angular Lession, Ruoyu">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Angular Lession | Ruoyu</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <!-- <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <span class="logo-span">Ruoyu</span>
+                </a>
+            </div> -->
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <div class="logo-name">Ruoyu</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/runkie" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/runkie" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/../images/Fullstack%20Academy.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Angular Lession</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    .toc-fixed .toc-link::before{
+        position: fixed!important;/*当toc的位置改为fixed时，.toc-link::before也要改为fixed*/
+    }
+
+    #toc-content .is-active-link {
+        color: #4a42b9;
+    }
+
+    /* #toc-content .is-active-link::before {
+        background-color: #42b983;
+    } */
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/javaScript/">
+                                <span class="chip bg-color">javaScript</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Front-end/" class="post-category">
+                                Front end
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2019-08-10
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    5.5k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    22 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h2><h3 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h3><p>Angular 是前端框架之一，使用 TypeScript 作为编程语言，主要解决日渐庞大的前端（Front end）开发和测试问题。前端和后端通过HTTP协议用以传递数据（Data）。</p>
+<p>开发环境准备<br>我的环境是macOS。</p>
+<p>安装稳定版Nodejs，用来使用npm命令（Node Package Manager），以便安装后面所需的软件，安装完成使用node –version验证<br>安装Angular CLI（Command-Line Interface 命令行工具）</p>
+<pre><code>$ sudo npm install -g @angular/cli</code></pre><p>-g代表 Global，将安装在公共目录，不带此参数代表只将Angular CLI安装在当前目录。安装完成后用ng –version来验证，ng是Angular CLI提供的命令</p>
+<h2 id="Day-2"><a href="#Day-2" class="headerlink" title="Day 2"></a>Day 2</h2><h3 id="第一个Angular应用"><a href="#第一个Angular应用" class="headerlink" title="第一个Angular应用"></a>第一个Angular应用</h3><pre><code>$ ng new hello-world</code></pre><p>推荐的开发工具（IDE）<br>我使用VS Code。</p>
+<p>使用Shift+CMD/CTRL+P打开命令面板（Command Palette）<br>在命令面板中键入code，下面找到Install code command in PATH，这将允许你在命令行中键入code 文件夹用VS Code快速打开该目录。你可以用命令行进入hello-world目录然后键入code .打开hello-world项目。<br>添加Auto Import插件，以便VS Code可以自动完成引用所需ts模块的import代码。<br>使用F2可以对变量等内容进行批量重命名。<br>运行Angular应用进入hello-world，然后</p>
+<pre><code>$ ng serve</code></pre><p>这将建立一个Web服务器，你可以用浏览器打开localhost:4200来查看运行结果了。</p>
+<h3 id="Angular-项目结构"><a href="#Angular-项目结构" class="headerlink" title="Angular 项目结构"></a>Angular 项目结构</h3><p>e2e，端对端（End to End）测试，一种黑盒自动化测试方法<br>node_modules，我们这个项目的所需的node第三方模块（依赖）<br>src，我们项目的源代码</p>
+<pre><code>-- app，存放module和component，后续会继续介绍
+-- assets，存放静态资源文件（例如图片，图标）
+-- environments，环境配置信息
+-- index.html，应用主页面（无需修改）
+-- main.ts，程序起始逻辑
+-- polyfills.ts，为主流浏览器提供Angular所需的JS特性适配
+-- test.ts，测试文件
+.angular-cli.json，Angular CLI所需配置
+.editorconfig，为团队提供相同的编辑器配置
+.gitignore，提交Git库可忽略的文件
+karma.conf.js，Karma是一个JS测试工具
+package.json，node的依赖库配置
+protractor.conf.js，端到端测试配置
+tsconfig.json，TypeScript配置
+tslint.json，Tslint配置</code></pre><h3 id="Webpack"><a href="#Webpack" class="headerlink" title="Webpack"></a>Webpack</h3><p>Webpack是一个自动构建工具，它做了一件事，就是把你的HTML，Javascript，CSS都分别打包成了单一的bundle.js文件，并在运行时注入到页面中。</p>
+<p>Angular使用Webpack作为编译工具，当你在编辑器修改了文件，Webpack可监控这些改动并重新编译并重新注入，你无需刷新浏览器即可看到修改生效。</p>
+<h3 id="Angular-历史"><a href="#Angular-历史" class="headerlink" title="Angular 历史"></a>Angular 历史</h3><p>2010年，Angular 1.0诞生（诞生时称作Angular，而现在改称为AngularJS，以区别于2.0以上的版本），诞生时是一个基于JavaScript的前端框架<br>随着Angular的升温，JavaScript并不能满足日益增多的开发需求和支撑AngularJS框架的日益庞大，于是Angular小组决定重写其框架底层<br>2016年，Angular 2诞生，基于TypeScript，你可以理解成几乎是一个全新的框架，这也给基于AngularJS的开发人员迁移到2.0造成了很大困扰<br>Angular 2.0, 2.1, 2.2, 2.3之后，Angular 4突然出现了，但Angular 4其实并不是大幅度的更新，也可以理解成2.4，主要原因是为了统一其子组件的版本，在4之前，子组件的版本号参差不齐，最高的是@angular/router为3.3.0，因此干脆全部变成4.0 因此业界现在所说的AngularJS则代表的1.x（已经淘汰），Angular代表2.0和以后的版本。<br>TypeScript 基础<br>因为Angular使用TypeScript作为主要开发语言，所以不得不先了解一下TypeScript。</p>
+<h3 id="TypeScript-简述"><a href="#TypeScript-简述" class="headerlink" title="TypeScript 简述"></a>TypeScript 简述</h3><p>TypeScript是一种由微软开发的自由和开源的程式语言。它是JavaScript的一个严格超集。 C#的首席架构师以及Delphi和Turbo Pascal的创始人安德斯·海尔斯伯格参与了TypeScript的开发。</p>
+<p>TypeScript设计目标是开发大型应用，然后转译成JavaScript。由于TypeScript是JavaScript的严格超集，任何现有的JavaScript代码都可在TypeScript程序中顺利执行。</p>
+<p>但可惜的是网页浏览器并不认识TypeScript（也没打算在今后支持），所以运行前TypeScript需要转译（严格意义上不算编译，但后文仍使用编译一词）成JavaScript，TypeScript的编译器tsc可以帮我们完成编译过程。</p>
+<p>TypeScript有以下优势和特点：</p>
+<p>强类型（Strong Type），必须定义变量类型，有助于调试，避免运行时错误等<br>面向对象特性，也就是有你在Java中熟悉的Class，Interface，Public，Private等等<br>可在编译时发现错误，避免运行时错误<br>优秀的IDE支持（例如VS Code）</p>
+<h3 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h3><p>使用tsc（Type Script Complier）编译第一个TypeScript程序，main.ts</p>
+<pre><code>$ tsc main.ts</code></pre><p>编译后，你将看到一个main.js文件，这就是编译后的文件。你可以用node来运行它</p>
+<pre><code>$ node main.js</code></pre><p>在Angular中，我们不需要使用tsc来构建。Angular CLI会自动帮我们完成编译。</p>
+<h3 id="声明变量"><a href="#声明变量" class="headerlink" title="声明变量"></a>声明变量</h3><p>在JavaScript中，我们用var来声明一个变量，一旦声明，它的作用域是这一行以下的全部区域。</p>
+<p>而在TypeScript中，使用let定义变量，作用域类似于Java，只作用于当前代码块。因此TypeScript可以避免很多不必要的错误。<br>let count = 5; //定义一个变量并赋值5，赋值后count将为数字型<br>let count: number; //显性定义count为数字型<br>let count; //定义一个变量count为任意性，类似于js中的var</p>
+<p>let a: number; //整数，小数<br>let b: boolean; //true, false<br>let c: string; //字符串<br>let d: any; //任意<br>let e: number[] = [1, 2, 3]; //数字型数组定义<br>let f: any[] = [1, true, ‘a’, false]; //任意型数组<br>const ColorRed = 0; //常量定义<br>//枚举类型定义，不定义则为数字型，从0开始自动赋值<br>enum Color { Red, Green, Blue }; </p>
+<p>let backgroundColor = Color.Green; //Color.Green 值为1</p>
+<p>//建议给枚举类型的每一项赋值，避免日后从中间增加新项<br>enum Color { Red=0, Green=1, Blue=2 };<br>注意：即便在有错误的情况下，仍然可以编译出js文件，且js文件还可能正常运行，但一定要解决ts的错误。tsc只会报告给你错误，但并不阻止编译。</p>
+<p>当变量类型为any时，我们需要类型断言（Type Assertion）为特定类型，以便使用该类型的方法，也开启了IDE的自动完成功能。</p>
+<p>注意：类型断言不是类型转换，断言成一个联合类型中不存在的类型是不允许的。<br>let message; //此时message为any型<br>message = ‘abc’;<br>//将message断言为string类型，才可使用endsWith方法<br>let endsWithC = (<string>message).endsWith(‘c’);<br>//另一种断言写法<br>let alternativeWay = (message as string).endsWith(‘c’);<br>箭头函数 (Arrow function)<br>let log = function(message) {<br>    console.log(message);<br>}<br>let doLog = (message) =&gt; {<br>    //有很多行<br>    console.log(message);<br>}</p>
+<pre><code>//函数内只有一行
+let doAnotherLog = (message) =&gt; console.log(message); 
+//函数没有参数
+let doNoParameterLog = () =&gt; console.log();
+接口（Interface）
+很多时候，我们为了避免方法中包含过多入参，而会把这些入参定义为一个对象，并用对象作为入参取代若干参数。例如这样：
+
+//使用内联注释的方式定义一个point对象
+let drawPoint = (point: { x: number, y: number }) {
+    // ...
+}
+
+drawPoint({
+    x: 1,
+    y: 2
+})
+该方法可用于简单的案例，缺点是point类型无法在其他函数中复用，drawPoint是独立的函数，其实应该归属于point（因为画点和点相关，他们应该归类在一起）。所以这里可考虑使用接口和类。
+
+//给接口命名时，首字母大写
+interface Point {
+    x: number,
+    y: number,
+    draw: () =&gt; void
+}
+接口其实就是定义一个标准，比如点应该包含x和y，还有一个画点的方法。所以接口中只包含定义，而不包含方法的实现部分。
+
+### 类（Class）
+class Point {
+    x: number;
+    y: number;
+    draw() {
+        console.log(&#39;X: &#39; + this.x + &#39;, Y: &#39; + this.y);
+    }
+}
+
+//用new关键字生成Point类的一个实例
+let point = new Point();
+point.x = 1;
+point.y = 2;
+point.draw();
+构造方法 (Constructor)
+上一节的代码其实有冗余之处，也就是我们用了好几行来给x和y赋值，但他们的值应该在创建point就应该具有了。
+
+因此我们可以使用构造方法来完成这一操作。
+
+class Point {
+    x: number;
+    y: number;
+
+    constructor(x: number, y: number) {
+        this.x = x;
+        this.y = y;
+    }
+
+    draw() {
+        console.log(&#39;X: &#39; + this.x + &#39;, Y: &#39; + this.y);
+    }
+}
+
+let point = new Point(1, 2);
+point.draw();
+但在TypeScript中，只能定义一个构造方法。因此可以用?来定义该参数是否可选。
+
+class Point {
+    //...
+
+    constructor(x?: number, y?: number) {
+        this.x = x;
+        this.y = y;
+    }
+}
+访问修饰符（Access Modifier），访问控制
+有时候，我们不想有些成员变量可被外界访问。因此我们可以使用访问修饰符。也就是你熟悉的private、public。
+
+不带修饰符的默认为public。private则限制该变量或方法只能在该类内部使用。
+
+class Point {
+    private x: number;
+    private y: number;
+}
+### 自动构造成员变量
+而在构造方法的输入参数中如果添加了private这样的修饰符则有额外作用，就是构造方法可以按照入参创建成员变量，并把入参值赋予该成员变量。
+
+class Point {
+    //...
+
+    //相当于定义了成员变量 private x和y，并执行 this.x = x; this.y = y;
+    constructor(private x?: number, private y?: number) {
+    }
+}
+### 属性（Property）
+上面的例子中，我们虽然控制了x和y无法从外界赋值，但外界也无法得到x和y的值。
+
+通常我们需要创建get方法，例如创建getX，但外界就需要调用point.getX()来获取x的值。有没有办法可以用point.x这种更干净的写法呢？
+
+而还有些时候，我们想让外界可以给x赋值，但只能赋特定的值或范围。
+
+综合以上使用场景，我们可以使用属性。
+
+class Point {
+    constructor(private _x?: number, private _y?: number) {
+    }
+
+    get x() {
+        return this._x;
+    }
+
+    set x(value) {
+        if (value &lt; 0) {
+            throw new Error(&#39;value cannot be less than 0.&#39;);
+        }
+        this._x = value;
+    }
+}
+
+let point = new Point(1, 2);
+let x = point.x; //会执行get x方法
+point.x = 10; //会执行set x方法
+point.draw();
+属性其实并不是成员变量，而只是简化了的Get和Set方法，但由于其用法类似于public变量，所以如果你定义了一个属性x，则会跟构造函数中定义的成员变量x冲突（IDE会报错，因为当调用方执行point.x = 5时不知道是应该给x赋值还是调用的属性方法set x），因此通常规则是private的成员变量以下划线开头命名，也就是_x，这样属性就可以定义成x。这样调用方可以认为point.x的x就是Point类的成员变量“x”了。
+
+模块（Module）
+你可以把关于Point类的代码放在另一个文件中，例如point.ts，然后通过import引用，这时Point就是一个模块。
+
+//引用时，路径中不需要包含扩展名&#39;.ts&#39;
+import { Point } from &#39;./point&#39;
+
+let point = new Point(1, 2);
+//...
+## Day 3
+
+### Angular 基础
+Component(组件) 一个组件包含数据 Data，HTML模板 Template和页面逻辑 Logic，Component以树形结构组成
+Module(模块) 模块是包含多个Component的集合，复杂应用可能包含多个模块
+Service(服务) 从字面意思可得出，Service 类似于公共逻辑库，完成一项或多项任务。例如读取数据、发送HTTP请求等等，可被其他 Component 调用。而 Component 中的逻辑部分只限于页面显示逻辑，与业务相关的逻辑应当放置于 Service 中。同时服务可有助于单元测试和自动化测试。例如数据库服务可在单元测试时很容易的用数据模拟服务替代
+组件和服务（Component &amp; Service）
+$ ng g c course
+g代表generate（生成），c代表component。
+
+命名规则为全小写，有多个词时用-隔开，例如word1-word2
+
+在course.component.ts你可以看到component的主体代码，其中分为几部分：
+
+import该Component所引用的模块
+@Component修饰符，里面包含selectorHTML标签名，templateHTML模板（也就是这个Component在页面中所包含的HTML代码），style该Component包含的样式（作用域仅在该Component的HTML标签内部）
+export class该Component的数据部分（类成员变量）和逻辑部分（类方法）
+Component 需要注册到 Module 中才能使用（例如app.moudle.ts），在declarations中注册。
+
+见以下例子：
+
+import { Component } from &#39;@angular/core&#39;;
+
+@Component({
+    selector: &#39;courses&#39;,
+    template: `
+        &lt;h2&gt;{{ title }}&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li *ngFor=&quot;let course of courses&quot;&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    `
+})
+export class CoursesComponent {
+    title = &quot;list of courses&quot;;
+    courses = [&quot;course1&quot;, &quot;course2&quot;, &quot;course3&quot;];
+}
+其中一些概念：
+
+{{ }}称为 String Interpolation（字符串插值），也就是在HTML中插入一些逻辑代码的意思，因此在大括号里面你可以使用该Component的变量和方法
+*这种用法称为 Directive（指令），类似于HTML标签的 Property（属性），每个 Directive 会包含一些逻辑或作用。
+服务 Service 的代码就类似于一个普通的TS类，看以下例子：
+
+$ ng g s courses
+import { Injectable } from &#39;@angular/core&#39;;
+
+@Injectable()
+export class CoursesService {
+    getCourses() {
+        return [&quot;course1&quot;, &quot;course2&quot;, &quot;course3&quot;];
+    }
+}
+调用时，使用依赖注入的方式。
+
+### 依赖注入（Dependency Injection）
+什么是依赖注入？这个词貌似很难理解，其实就是下面这回事：
+
+在Component中的构造方法中声明我要用的服务，这些服务也就是依赖（以构造方法的自动构造成员变量特性声明依赖）
+在Module中的providers中注入该依赖，也就是声明服务的提供者 使用依赖注入的好处在于将服务的使用者与服务的提供者解耦。
+具体来讲，原来我要在Component里面new一个Service，那么一旦将来要更换这个Service，我就要修改所有涉及调用该Service的Component。
+
+而使用依赖注入的理念，我只需要在Component里面提供这个Service的名字，在Module中，我将该Service接入，那么利用面向对象的思想，我可以在Module中接入该Service，也可以接入该Service的子类，比如这个Service是负责发起HTTP请求的，我可以很轻易的创建一个该Service的子类，写死数据包模拟HTTP返回，这样可以为单元测试提供很大帮助
+
+依赖注入时，服务将以单例方式被创建。
+
+
+
+来看依赖注入的例子： 在courses.component.ts中：
+
+//...
+export class CoursesComponent {
+    title = &quot;list of courses&quot;;
+    constructor(service: CoursesService) {
+    }
+}
+在app.module.ts中：
+
+@NgModule({
+    //...
+    providers: [
+        CoursesService
+    ]
+    //...
+})
+在Service类中，你会发现@Injectable()修饰符，这表明该类中的构造方法可以使用依赖注入。而Component中没有@Injectable()但依然可以使用依赖注入是因为Angular对Component默认开启了这个权限。
+
+## Day 4
+
+### DOM 属性绑定（Property Binding）
+下面的写法，是将DOM定义的属性名字绑定给Component的成员变量。当成员变量值改变时，相应也会自动反应到页面中。
+
+大多数DOM的属性名和HTML标签的属性名一致。但一定要明确绑定的是DOM的属性名。
+
+&lt;!--使用字符串插值方式--&gt;
+&lt;h2&gt;{{ title }}&lt;/h2&gt;
+&lt;!--将src属性绑定到title变量--&gt;
+&lt;img [src]=&quot;title&quot;&gt;
+上面的例子中，将img标签的src属性绑定为title变量，当title改变时，页面的图片也将会实时改变。而属性绑定是单向的，因此反之若用JavaScript修改了src属性的值，component的title变量值则不会改变。我们将会使用双向绑定处理这个场景。
+
+HTML 属性绑定（Attribute Binding）
+就像上文说的，99%的DOM属性名和HTML属性名一致，但也有例外。例如在DOM中td是没有colspan属性的，因此需要使用attr.告诉Angular我们正在绑定HTML的属性colspan。
+
+&lt;h1 [textContent]=&quot;title&quot;&gt;&lt;/h1&gt;
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td [attr.colspan]=&quot;colSpan&quot;&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+给项目添加第三方库
+例如我们要添加的是Bootstrap，一个非常知名的CSS样式库。
+
+$ npm install bootstrap --save
+install代表安装，而--save代表将Bootstrap添加到该项目的依赖配置文件（package.json）中。
+
+添加依赖后，其他成员在下载了同一个项目之后，当他运行npm install时，npm将依据依赖配置文件package.json下载到软件仓库下载所需的库或组件。依赖配置文件对项目的环境搭建至关重要。
+
+注意，在提交版本库时，node_module文件夹下的所有文件不应被提交，而是用npm install即时安装。
+
+如果我们打开package.json，我们看到每个依赖后面都有一个版本信息，例如：
+
+{
+    ...
+    &quot;dependencies&quot;: {
+        ...
+        &quot;bootstrap&quot;: &quot;^3.3.7&quot;,
+        ...
+    }
+}
+版本号规则大致为大版本.小版本.补丁版本，而^代表着可以使用大版本一致的最新版本。例如^3.3.7代表我们可以用3.4，3.5，但假设最新版本已经是4.1.6了，我们将会安装大版本为3的最后一个版本。
+
+那么如何使用Bootstrap这个库呢？
+
+因为它是一个样式库，因此我们可以在styles.css中引用Bootstrap
+
+@import &quot;~bootstrap/dist/css/bootstrap.css&quot;
+~代表node_module文件夹。
+
+之后就可以在Component中使用它了。
+
+样式绑定（Style Binding）
+怎样绑定HTML的class（css样式）和style属性呢？
+
+import { Component } from &#39;@angular/core&#39;;
+
+@Component({
+    selector: &#39;courses&#39;,
+    template: `
+        &lt;button class=&quot;btn btn-primary&quot; [class.active]=&quot;isActive&quot;&gt;Save&lt;/button&gt;
+    `
+})
+export class CoursesComponent {
+    isActive = true;
+}
+此例中，样式active是否使用取决于isActive是否为true。
+
+注意下面绑定的是DOM的style名称。
+
+import { Component } from &#39;@angular/core&#39;;
+
+@Component({
+    selector: &#39;courses&#39;,
+    template: `
+        &lt;button [style.backgroundColor]=&quot;isActive ? &#39;blue&#39; : &#39;white&#39;&quot;&gt;Save&lt;/button&gt;
+    `
+})
+export class CoursesComponent {
+    isActive = true;
+}
+事件绑定和过滤（Event Binding &amp; Filtering）
+事件绑定是用于绑定像onclick（点击事件），onkeyup（按键事件）等这类事件，看以下例子：
+
+import { Component } from &#39;@angular/core&#39;;
+
+@Component({
+    selector: &#39;courses&#39;,
+    template: `
+        &lt;div (click)=&quot;onDivClicked()&quot;&gt;
+            &lt;button (click)=&quot;onSave($event)&quot;&gt;Save&lt;/button&gt;
+        &lt;/div&gt;
+    `
+})
+export class CoursesComponent {
+    onSave($event) {
+        console.log(&quot;Button was clicked&quot;, $event);
+    }
+    onDivClicked($event) {
+        console.log(&quot;Div was clicked&quot;);
+    }
+}
+使用小括号()包裹在事件属性（去掉on）上，使用$event用来传递事件信息。
+
+注意多数事件的触发默认会向上传递（事件冒泡 Event Bubbling），例如本例中，我们监听了div和button的点击事件，如果点击了button，结果将是：
+
+Button was clicked
+    MouseEvent {...}
+Div was clicked
+如果不想向上传递，则可使用$event.stopPropagtion()来阻止。
+
+onSave($event) {
+    $event.stopPropagtion();
+    console.log(&quot;Button was clicked&quot;, $event);
+}
+假设我们有一个场景是，仅当在输入框键入回车时完成表单提交，传统的做法是，监听keyup事件，在实现方法中用if判断$event.keyCode是否等于13。在Angular中，我们可以使用事件过滤：
+
+import { Component } from &#39;@angular/core&#39;;
+
+@Component({
+    selector: &#39;courses&#39;,
+    template: `
+        &lt;input (keyup.enter)=&quot;onKeyUp()&quot;
+    `
+})
+export class CoursesComponent {
+    onKeyUp() {
+        console.log(&quot;ENTER was pressed&quot;);
+    }
+}
+模板变量（Template Variable）
+其实可以理解成内联变量，也就是在HTML标签内临时定义的变量，该变量代表了所在标签本身的对象。看以下例子：
+
+例如我们现在想知道用户按回车键时输入框输入的内容：
+
+import { Component } from &#39;@angular/core&#39;;
+
+@Component({
+    selector: &#39;courses&#39;,
+    template: `
+        &lt;input #email (keyup.enter)=&quot;onKeyUp(email.value)&quot;
+    `
+})
+export class CoursesComponent {
+    onKeyUp(email) {
+        console.log(email);
+    }
+}
+我们在input标签内使用#定义了一个模板变量email，此时email就代表了这个input标签本身，当在按下回车键时，我们将email.value，也就是input的value值（DOM中input.value代表着input输入框里面的内容）传递给onKeyUp方法。
+
+双向绑定（Two-way Binding）
+上面的代码可以解决简单问题，但能否不建立模板变量并传递，就可以在Component中读取input的值呢？
+
+import { Component } from &#39;@angular/core&#39;;
+
+@Component({
+    selector: &#39;courses&#39;,
+    template: `
+        &lt;input [(ngModel)]=&quot;email&quot; (keyup.enter)=&quot;onKeyUp()&quot;
+    `
+})
+export class CoursesComponent {
+    email = &quot;me@example.com&quot;;
+
+    onKeyUp() {
+        console.log(this.email);
+    }
+}
+在app.module.ts中：
+
+//...
+import { FormsModule } from &#39;@angular/forms&#39;;
+//...
+@NgModule({
+    //...
+    imports: [
+        //... ,
+        FormsModule
+    ]
+});
+用[(ngModel)]来表示双向绑定，后面接变量即可，并且要添加FormsModule。
+
+管道和自定义管道（Pipes）
+管道用于在页面上快速格式化显示文本，看以下例子：
+
+import { Component } from &#39;@angular/core&#39;;
+
+@Component({
+    selector: &#39;courses&#39;,
+    template: `
+        {{ course.title | uppercase }} &lt;br/&gt; &lt;!--大写--&gt;
+        {{ course.title | lowercase }} &lt;br/&gt; &lt;!--大写--&gt;
+        {{ course.students | number }} &lt;br/&gt; &lt;!--数字并用逗号表示千位分隔符--&gt;
+        {{ course.rating | number:'2.1-1' }} &lt;br/&gt; &lt;!--2位整数，最少1位小数最多1位小数（结果：05.0，前补0，小数四舍五入位1位）--&gt;
+        {{ course.price | currency:'AUD':true:'3.2-2' }} &lt;!--货币显示，true表示是否显示$--&gt;
+        {{ course.releaseDate | date:'shortDate' }}&lt;!--日期显示--&gt;
+    `
+})
+export class CoursesComponent {
+    course = {
+        title: &quot;The Complete Angular Course&quot;,
+        students: 30123,
+        rating: 4.9745,
+        price: 190.95,
+        releaseDate: new Date(2016, 3, 1)
+    }
+}
+可以在Angular官方网站https://angluar.io/api/common/DatePipe查看全部用法。
+
+如何建立自定义管道呢？
+
+我们以做一个截取字符串前50个字符的管道为例，
+
+新建summary.pipe.ts：
+
+import { Pipe, PipeTransform } from &#39;@angular/core&#39;;
+
+//管道名字
+@Pipe({
+    name: &#39;summary&#39;
+})
+export class SummaryPipe implements PipeTransform {
+    transform(value: string, limit?: number) {
+        if (!value)
+            return null;
+        let actualLimit = (limit) ? limit : 50;
+        return value.substr(0, actualLimit) + &#39;...&#39;;
+    }
+}
+在app.module.ts中注册这个管道：
+
+//...
+import { SummaryPipe } from &#39;./summary.pipe&#39;;
+//...
+@NgModule({
+    //...
+    declarations: [
+        //... ,
+        SummaryPipe
+    ]
+});
+在Component中使用：
+
+import { Component } from &#39;@angular/core&#39;;
+
+@Component({
+    selector: &#39;courses&#39;,
+    template: `
+        {{ text | summary:10 }}
+    `
+})
+export class CoursesComponent {
+    text = `
+        Learn one way to build applications with Angular and reuse your code and abilities to build apps for any deployment target. For web, mobile web, native mobile and native desktop.
+    `
+}
+</code></pre>
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://runkie.github.io" rel="external nofollow noreferrer">Ruoyu Li</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://runkie.github.io/2019/08/10/angular/">http://runkie.github.io/2019/08/10/angular/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="http://runkie.github.io" target="_blank">Ruoyu Li</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/javaScript/">
+                                    <span class="chip bg-color">javaScript</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2020/01/01/hello-world/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Hello World - Hexo + Github Page 搭建个人博客">
+                        
+                        <span class="card-title">Hello World - Hexo + Github Page 搭建个人博客</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            First post of my blog.
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-01-01
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Blog/" class="post-category">
+                                    Blog
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Hexo/">
+                        <span class="chip bg-color">Hexo</span>
+                    </a>
+                    
+                    <a href="/tags/GitPages/">
+                        <span class="chip bg-color">GitPages</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/08/10/angular/">
+                    <div class="card-image">
+                        
+                        <img src="/../images/Fullstack%20Academy.jpg" class="responsive-img" alt="Angular Lession">
+                        
+                        <span class="card-title">Angular Lession</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Angular Development
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-08-10
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Front-end/" class="post-category">
+                                    Front end
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/javaScript/">
+                        <span class="chip bg-color">javaScript</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('50')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Ruoyu<br />'
+            + '文章作者: Ruoyu Li<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="http://runkie.github.io" target="_blank">Ruoyu Li</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            <!-- |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a> -->
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">26.9k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "1";
+                    var startDate = "1";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/runkie" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:liruoyu.career@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
