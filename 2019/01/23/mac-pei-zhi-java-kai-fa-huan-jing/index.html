@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="在eclipse上配置Tomcat, Ruoyu">
+    <meta name="keywords" content="Mac配置java开发环境, Ruoyu">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>在eclipse上配置Tomcat | Ruoyu</title>
+    <title>Mac配置java开发环境 | Ruoyu</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -216,12 +216,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <!-- <div class="brand">
-                    <h1 class="description center-align post-title">在eclipse上配置Tomcat</h1>
+                    <h1 class="description center-align post-title">Mac配置java开发环境</h1>
                 </div> -->
             </div>
         </div>
@@ -350,10 +350,6 @@
                                 <span class="chip bg-color">java</span>
                             </a>
                         
-                            <a href="/tags/Tomcat/">
-                                <span class="chip bg-color">Tomcat</span>
-                            </a>
-                        
                     </div>
                     
                 </div>
@@ -384,7 +380,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    418
+                    400
                 </div>
                 
 
@@ -406,37 +402,52 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><blockquote>
-<p>首先确认eclipse是否支持web project, 如果你不确定你是否可以建立Dynamic Web Project, 你可以通过点击File &gt; New &gt; Other, 然后输入关键词搜索来确定, 搜索不到则需要安装插件.</p>
+                <p>本文简单介绍在Mac OS环境下的java开发环境搭建</p>
+<h3 id="JDK下载及安装"><a href="#JDK下载及安装" class="headerlink" title="JDK下载及安装"></a>JDK下载及安装</h3><p>打开<a href="https://www.oracle.com/java/technologies/javase-downloads.html" target="_blank" rel="noopener">Oracle</a>官网下载JDK</p>
+<p>本文下载的是java SE 8版本</p>
+<p><img src="https://i.loli.net/2020/11/29/yGD1uCwQNaq7ZLo.png" alt="下载页面"></p>
+<p>选择<code>JDK Download</code>并选择相应系统进行下载</p>
+<p>本文介绍Mac OS系统下的环境配置因此选择macOS x64</p>
+<p><img src="https://i.loli.net/2020/11/29/6SUpIRiOPdVjMTc.png" alt="本文介绍MAC OS系统下的环境搭建"></p>
+<p>下载完成后直接安装一路next直到完成</p>
+<h3 id="查看JDK地址"><a href="#查看JDK地址" class="headerlink" title="查看JDK地址"></a>查看JDK地址</h3><p>我们可以根据以下命令查看JDK地址</p>
+<pre><code>$ /usr/libexec/java_home -V</code></pre><p><img src="https://i.loli.net/2020/11/29/jE6lH3agcoCwksB.png" alt="jdk地址"></p>
+<p>记好JDK的安装路径后面会用到</p>
+<pre><code>/Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home</code></pre><h3 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h3><h4 id="生成配置文件"><a href="#生成配置文件" class="headerlink" title="生成配置文件"></a>生成配置文件</h4><p>打开终端Terminal</p>
+<ul>
+<li><p>如果是第一次配置环境变量, 通过以下命令创建一个名为<code>.bash_profile</code>隐藏配置文件</p>
+<pre><code>$ touch .bash_profile</code></pre></li>
+<li><p>如果不是第一次配置环境变量, 使用命令打开配置文件</p>
+<pre><code>$ open -e .bash_profile</code></pre></li>
+</ul>
+<h4 id="填写配置文件"><a href="#填写配置文件" class="headerlink" title="填写配置文件"></a>填写配置文件</h4><p>在配置文件中输入以下的内容</p>
+<pre><code>JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home
+PATH=$JAVA_HOME/bin:$PATH:.
+CLASSPATH=$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar:.
+export JAVA_HOME
+export PATH
+export CLASSPATH</code></pre><p>保存并关闭配置文件</p>
+<blockquote>
+<p>注意: JAVA_HOME的值是上文提到的JDK安装路径</p>
+<ul>
+<li>如果是通过vi打开的<ul>
+<li>按下<code>i</code>进入输入模式</li>
+<li>输入内容后按<code>esc</code>进入保存模式</li>
+<li>输入<code>:wq!</code>保存</li>
+</ul>
+</li>
+<li>如果是通过文本打开的<ul>
+<li>输入配置内容</li>
+<li>通过<code>command + S</code>保存并退出</li>
+</ul>
+</li>
+</ul>
 </blockquote>
-<p>点击Help中的<code>Install New Software...</code></p>
-<p><img src="https://i.loli.net/2020/11/29/7gnoph3BCWuQO2S.png" alt=""></p>
-<p>点击<code>Add</code>按钮.名字不重要, 我的eclipse版本是mars</p>
-<p><img src="https://i.loli.net/2020/11/29/hmo2dpESwKfxGJ4.png" alt=""></p>
-<p>勾选最后一个选项, 其他不用改, 一直点下一步就好</p>
-<p>更新需要一点时间, 图标会有显示, 页面右下角也会有显示.更新完成后会提示重启, 点确定</p>
-<p><img src="https://i.loli.net/2020/11/29/OyQKDfqo4hES3Ug.png" alt=""></p>
-<h3 id="下载Tomcat"><a href="#下载Tomcat" class="headerlink" title="下载Tomcat"></a>下载Tomcat</h3><p>通过<a href="https://Tomcat.apache.org/download-80.cgi0" target="_blank" rel="noopener">官方网站</a>下载.(下载文件：mac下载 zip 和 tar.gz 都可)</p>
-<p>安装：压缩之后直接拷贝到资源库中.(在Machintosh HD&gt;资源库&gt;新建Tomcat文件夹, 并将<code>apache-Tomcat-x.0.90</code>中的内容复制到Tomcat中)</p>
-<h3 id="启动和关闭Tomcat"><a href="#启动和关闭Tomcat" class="headerlink" title="启动和关闭Tomcat"></a>启动和关闭Tomcat</h3><h4 id="启动Tomcat"><a href="#启动Tomcat" class="headerlink" title="启动Tomcat"></a>启动Tomcat</h4><p>进入Tomcat的bin目录</p>
-<pre><code>$ cd /Library/Tomcat/bin</code></pre><p>授权bin目录下的所有操作</p>
-<pre><code>$ sudo chmod 755 *.sh</code></pre><p>开启Tomcat</p>
-<pre><code>$ sudo sh ./startup.sh</code></pre><p>在浏览器地址栏输入<code>http://localhost:8080</code>显示如下界面代表开启成功</p>
-<p><img src="https://i.loli.net/2020/11/29/9krs67gmjUHunWo.jpg" alt=""></p>
-<h4 id="关闭Tomcat"><a href="#关闭Tomcat" class="headerlink" title="关闭Tomcat"></a>关闭Tomcat</h4><pre><code>$ sh ./shutdown.sh</code></pre><h3 id="配置Tomcat在eclipse的插件"><a href="#配置Tomcat在eclipse的插件" class="headerlink" title="配置Tomcat在eclipse的插件"></a>配置Tomcat在eclipse的插件</h3><h4 id="下载插件"><a href="#下载插件" class="headerlink" title="下载插件"></a>下载插件</h4><p>下载<a href="https://sourceforge.net/projects/Tomcatplugin/" target="_blank" rel="noopener">插件</a>并解压</p>
-<h4 id="配置插件"><a href="#配置插件" class="headerlink" title="配置插件"></a>配置插件</h4><p>点击Help下的<code>install new software</code></p>
-<p><img src="https://i.loli.net/2020/11/29/q4sfDmlxop6Z8vW.jpg" alt=""></p>
-<p>按顺序点击<code>add&gt;local&gt;</code>选择刚才解压的文件夹, name栏自行随意填写</p>
-<p>一路next, 完成以后重启Eclipse. 完成后会在<code>Eclipse&gt;preferences</code>下看到Tomcat</p>
-<p><img src="https://i.loli.net/2020/11/29/5oE3g81Cz4BGenS.jpg" alt=""></p>
-<p>选择<code>Tomcat version</code>并填写Tomcat home的选项(/Library/Tomcat), 点击<code>apply and close</code>按钮</p>
-<h3 id="配置server与Tomcat"><a href="#配置server与Tomcat" class="headerlink" title="配置server与Tomcat"></a>配置server与Tomcat</h3><p>按顺序点击<code>Server&gt;Runtime Environments&gt;Add</code></p>
-<p><img src="https://i.loli.net/2020/11/29/ZdvyEzj4Qr8RfXt.jpg" alt=""></p>
-<p>选择Tomcat的版本</p>
-<p><img src="https://i.loli.net/2020/11/29/3CRJGhjX5ziBeKP.jpg" alt=""></p>
-<p>点击<code>next</code>并填写<code>Tomcat installation directory</code>(Tomcat安装路径)</p>
-<p><img src="https://i.loli.net/2020/11/29/rlXnDchawM5S1J4.jpg" alt=""></p>
-<p>点击<code>finish</code>即可添加成功</p>
+<h4 id="生效配置文件"><a href="#生效配置文件" class="headerlink" title="生效配置文件"></a>生效配置文件</h4><p>通过以下命令使配置文件生效</p>
+<pre><code>$ source .bash_profile</code></pre><h4 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h4><p>通过以下命令验证环境配置是否成功</p>
+<pre class=" language-$"><code class="language-$">$ echo $JAVA_HOME</code></pre>
+<p>如果输出jdk的路径则表示配置成功</p>
+<p><img src="https://i.loli.net/2020/11/29/3w6ms1UrPCYlf5g.png" alt="jdk环境变量配置成功"></p>
 
             </div>
             <hr/>
@@ -462,7 +473,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://runkie.github.io/2019/01/23/zai-eclipse-shang-pei-zhi-tomcat/">http://runkie.github.io/2019/01/23/zai-eclipse-shang-pei-zhi-tomcat/</a>
+                    <a href="http://runkie.github.io/2019/01/23/mac-pei-zhi-java-kai-fa-huan-jing/">http://runkie.github.io/2019/01/23/mac-pei-zhi-java-kai-fa-huan-jing/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -502,10 +513,6 @@
                             
                                 <a href="/tags/java/">
                                     <span class="chip bg-color">java</span>
-                                </a>
-                            
-                                <a href="/tags/Tomcat/">
-                                    <span class="chip bg-color">Tomcat</span>
                                 </a>
                             
                         </div>
@@ -551,73 +558,24 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/01/23/mac-pei-zhi-java-kai-fa-huan-jing/">
+                <a href="/2019/02/01/fullstack-academy-javase-module-1-task-2-bian-liang-he-shu-ju-lei-xing/">
                     <div class="card-image">
                         
+                        <img src="/../images/Fullstack%20Academy.jpg" class="responsive-img" alt="Fullstack Academy - JavaSE - Variables and Data types">
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Mac配置java开发环境">
-                        
-                        <span class="card-title">Mac配置java开发环境</span>
+                        <span class="card-title">Fullstack Academy - JavaSE - Variables and Data types</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Mac OS下java安装及环境变量配置
+                            变量与数据类型
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-01-23
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-02-01
                         </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Development-Environment/" class="post-category">
-                                    Development Environment
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/java/">
-                        <span class="chip bg-color">java</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/01/01/fullstack-academy-javase-module-1-task-1-ji-ben-gai-nian/">
-                    <div class="card-image">
-                        
-                        <img src="/../images/Fullstack%20Academy.jpg" class="responsive-img" alt="Fullstack Academy - JavaSE - Basic Knowledge">
-                        
-                        <span class="card-title">Fullstack Academy - JavaSE - Basic Knowledge</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            基本概念
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-01-01
-                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -639,6 +597,59 @@
                     
                     <a href="/tags/Backend/">
                         <span class="chip bg-color">Backend</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/01/23/zai-eclipse-shang-pei-zhi-tomcat/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="在eclipse上配置Tomcat">
+                        
+                        <span class="card-title">在eclipse上配置Tomcat</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            通过插件在eclipse上配置Tomcat环境
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-01-23
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Development-Environment/" class="post-category">
+                                    Development Environment
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/java/">
+                        <span class="chip bg-color">java</span>
+                    </a>
+                    
+                    <a href="/tags/Tomcat/">
+                        <span class="chip bg-color">Tomcat</span>
                     </a>
                     
                 </div>
