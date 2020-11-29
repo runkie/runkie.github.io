@@ -137,6 +137,33 @@
     
     
     <entry>
+      <title>在eclipse上配置Tomcat</title>
+      <link href="2019/01/29/zai-eclipse-shang-pei-zhi-tomcat/"/>
+      <url>2019/01/29/zai-eclipse-shang-pei-zhi-tomcat/</url>
+      
+        <content type="html"><![CDATA[<h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><blockquote><p>首先确认eclipse是否支持web project,如果你不确定你是否可以建立Dynamic Web Project,你可以通过点击File &gt; New &gt; Other,然后输入关键词搜索来确定,搜索不到则需要安装插件.</p></blockquote><p>点击Help中的Install New Software…</p><p>![](/Users/liruoyu/Documents/docs/media/在eclipse上配置Tomcat/在eclipse上配置Tomcat - 1.png)</p><p>点击Add按钮.名字不重要,我的eclipse版本是mars.</p><p>![](/Users/liruoyu/Documents/docs/media/在eclipse上配置Tomcat/在eclipse上配置Tomcat - 2.png)</p><p>勾选最后一个选项,其他不用改,一直点下一步就好.</p><p>更新需要一点时间,图标会有显示,页面右下角也会有显示.更新完成后会提示重启,点确定.</p><p>![](/Users/liruoyu/Documents/docs/media/在eclipse上配置Tomcat/在eclipse上配置Tomcat - 3.png)</p><h2 id="下载Tomcat"><a href="#下载Tomcat" class="headerlink" title="下载Tomcat"></a>下载Tomcat</h2><p>通过<a href="https://tomcat.apache.org/download-80.cgi0" target="_blank" rel="noopener">官方网站</a>下载.(下载文件：mac下载 zip 和 tar.gz 都可)</p><p>安装：压缩之后直接拷贝到资源库中（在Machintosh HD&gt;资源库&gt;新建一个tomcat文件夹,并将apache-tomcat-x.0.90中的内容复制到tomcat中 ）</p><h2 id="启动和关闭Tomcat"><a href="#启动和关闭Tomcat" class="headerlink" title="启动和关闭Tomcat"></a>启动和关闭Tomcat</h2><ol><li><p>进入Tomcat的bin目录下<br><code>cd /Library/Tomcat/bin</code></p></li><li><p>授权bin目录下的所有操作</p></li></ol><p><code>sudo chmod 755 *.sh</code></p><ol start="3"><li>开启Tomcat<br><code>sudo sh ./startup.sh</code></li></ol><p>![](/Users/liruoyu/Documents/docs/media/在eclipse上配置Tomcat/在eclipse上配置Tomcat - 4.jpg)</p><p>在浏览器地址栏输入<code>http://localhost:8080</code>显示如下界面代表开启成功.</p><p>![](/Users/liruoyu/Documents/docs/media/在eclipse上配置Tomcat/在eclipse上配置Tomcat - 5.png)</p><ol start="4"><li>关闭Tomcat</li></ol><p><code>sh ./shutdown.sh</code></p><h2 id="配置Tomcat在eclipse的插件"><a href="#配置Tomcat在eclipse的插件" class="headerlink" title="配置Tomcat在eclipse的插件"></a>配置Tomcat在eclipse的插件</h2><ol><li><p>下载<a href="https://sourceforge.net/projects/tomcatplugin/" target="_blank" rel="noopener">插件</a>并解压.</p></li><li><p>配置插件</p><p>打开Eclipse,Help&gt;install new software&gt; </p></li></ol><p>![](/Users/liruoyu/Documents/docs/media/在eclipse上配置Tomcat/在eclipse上配置Tomcat - 6.jpg)</p><p>点击add&gt;点击local&gt;选择刚才解压的文件夹,name栏自行随意填写.</p><p>一路next,完成以后重启一下Eclipse.完成后会在Eclipse&gt;preferences下看到tomcat. </p><p>![](/Users/liruoyu/Documents/docs/media/在eclipse上配置Tomcat/在eclipse上配置Tomcat - 7.jpg)</p><p>选择tomcat version 并填写Tomcat home的选项（/Library/Tomcat）,点击apply and close按钮.</p><h3 id="配置server与tomcat"><a href="#配置server与tomcat" class="headerlink" title="配置server与tomcat"></a>配置server与tomcat</h3><p>展开Server选项 –&gt; Runtime Environments –&gt; Add.</p><p>![](/Users/liruoyu/Documents/docs/media/在eclipse上配置Tomcat/在eclipse上配置Tomcat - 8.jpg)</p><p>选择tomcat的版本.</p><p>![](/Users/liruoyu/Documents/docs/media/在eclipse上配置Tomcat/在eclipse上配置Tomcat - 9.jpg)</p><p>点击next,填写tomcat installation directory（tomcat安装路径）,同tomcat home.</p><p>![](/Users/liruoyu/Documents/docs/media/在eclipse上配置Tomcat/在eclipse上配置Tomcat - 10.jpg)</p><p>点击finish即可添加成功. </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Development Environment </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+            <tag> Tomcat </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Fullstack Academy - JavaSE - Basic Knowledge</title>
       <link href="2019/01/01/fullstack-academy-javase-module-1-task-1-ji-chu-zhi-shi/"/>
       <url>2019/01/01/fullstack-academy-javase-module-1-task-1-ji-chu-zhi-shi/</url>

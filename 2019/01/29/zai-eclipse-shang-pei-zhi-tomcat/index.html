@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="博客的迁移, Ruoyu">
+    <meta name="keywords" content="在eclipse上配置Tomcat, Ruoyu">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>博客的迁移 | Ruoyu</title>
+    <title>在eclipse上配置Tomcat | Ruoyu</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -216,12 +216,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <!-- <div class="brand">
-                    <h1 class="description center-align post-title">博客的迁移</h1>
+                    <h1 class="description center-align post-title">在eclipse上配置Tomcat</h1>
                 </div> -->
             </div>
         </div>
@@ -346,8 +346,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Hexo/">
-                                <span class="chip bg-color">Hexo</span>
+                            <a href="/tags/java/">
+                                <span class="chip bg-color">java</span>
+                            </a>
+                        
+                            <a href="/tags/Tomcat/">
+                                <span class="chip bg-color">Tomcat</span>
                             </a>
                         
                     </div>
@@ -371,7 +375,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-11-23
+                    2019-01-29
                 </div>
                 
 
@@ -380,14 +384,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    120
+                    594
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -402,25 +406,54 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="数据迁移"><a href="#数据迁移" class="headerlink" title="数据迁移"></a>数据迁移</h2><p>复制旧电脑上的文件，只需复制以下几个：</p>
-<pre><code>_config.yml
-package.json
-scaffolds/
-source/
-themes/</code></pre><p>把上述文件加载到新的博客管理文件夹中.</p>
-<h2 id="环境搭建及部署"><a href="#环境搭建及部署" class="headerlink" title="环境搭建及部署"></a>环境搭建及部署</h2><ol>
-<li><p>进入博客目录，依次执行以下命令：</p>
-<pre><code>npm install
-npm install hexo-deployer-git --save</code></pre></li>
-<li><p>检验：</p>
-<pre><code>hexo g
-hexo s</code></pre><p>此时可访问浏览器：<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 就可以看到博客了.</p>
+                <h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><blockquote>
+<p>首先确认eclipse是否支持web project,如果你不确定你是否可以建立Dynamic Web Project,你可以通过点击File &gt; New &gt; Other,然后输入关键词搜索来确定,搜索不到则需要安装插件.</p>
+</blockquote>
+<p>点击Help中的Install New Software…</p>
+<p>![](/Users/liruoyu/Documents/docs/media/在eclipse上配置Tomcat/在eclipse上配置Tomcat - 1.png)</p>
+<p>点击Add按钮.名字不重要,我的eclipse版本是mars.</p>
+<p>![](/Users/liruoyu/Documents/docs/media/在eclipse上配置Tomcat/在eclipse上配置Tomcat - 2.png)</p>
+<p>勾选最后一个选项,其他不用改,一直点下一步就好.</p>
+<p>更新需要一点时间,图标会有显示,页面右下角也会有显示.更新完成后会提示重启,点确定.</p>
+<p>![](/Users/liruoyu/Documents/docs/media/在eclipse上配置Tomcat/在eclipse上配置Tomcat - 3.png)</p>
+<h2 id="下载Tomcat"><a href="#下载Tomcat" class="headerlink" title="下载Tomcat"></a>下载Tomcat</h2><p>通过<a href="https://tomcat.apache.org/download-80.cgi0" target="_blank" rel="noopener">官方网站</a>下载.(下载文件：mac下载 zip 和 tar.gz 都可)</p>
+<p>安装：压缩之后直接拷贝到资源库中（在Machintosh HD&gt;资源库&gt;新建一个tomcat文件夹,并将apache-tomcat-x.0.90中的内容复制到tomcat中 ）</p>
+<h2 id="启动和关闭Tomcat"><a href="#启动和关闭Tomcat" class="headerlink" title="启动和关闭Tomcat"></a>启动和关闭Tomcat</h2><ol>
+<li><p>进入Tomcat的bin目录下<br><code>cd /Library/Tomcat/bin</code></p>
 </li>
-<li><p>部署</p>
-<pre class=" language-hexo"><code class="language-hexo">hexo g -d</code></pre>
+<li><p>授权bin目录下的所有操作</p>
 </li>
 </ol>
-<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><p><a href="https://blog.csdn.net/eternity1118_/article/details/71194395?ref=myread" target="_blank" rel="noopener">更换电脑，如何继续写博客</a></p>
+<p><code>sudo chmod 755 *.sh</code></p>
+<ol start="3">
+<li>开启Tomcat<br><code>sudo sh ./startup.sh</code></li>
+</ol>
+<p>![](/Users/liruoyu/Documents/docs/media/在eclipse上配置Tomcat/在eclipse上配置Tomcat - 4.jpg)</p>
+<p>在浏览器地址栏输入<code>http://localhost:8080</code>显示如下界面代表开启成功.</p>
+<p>![](/Users/liruoyu/Documents/docs/media/在eclipse上配置Tomcat/在eclipse上配置Tomcat - 5.png)</p>
+<ol start="4">
+<li>关闭Tomcat</li>
+</ol>
+<p><code>sh ./shutdown.sh</code></p>
+<h2 id="配置Tomcat在eclipse的插件"><a href="#配置Tomcat在eclipse的插件" class="headerlink" title="配置Tomcat在eclipse的插件"></a>配置Tomcat在eclipse的插件</h2><ol>
+<li><p>下载<a href="https://sourceforge.net/projects/tomcatplugin/" target="_blank" rel="noopener">插件</a>并解压.</p>
+</li>
+<li><p>配置插件</p>
+<p>打开Eclipse,Help&gt;install new software&gt; </p>
+</li>
+</ol>
+<p>![](/Users/liruoyu/Documents/docs/media/在eclipse上配置Tomcat/在eclipse上配置Tomcat - 6.jpg)</p>
+<p>点击add&gt;点击local&gt;选择刚才解压的文件夹,name栏自行随意填写.</p>
+<p>一路next,完成以后重启一下Eclipse.完成后会在Eclipse&gt;preferences下看到tomcat. </p>
+<p>![](/Users/liruoyu/Documents/docs/media/在eclipse上配置Tomcat/在eclipse上配置Tomcat - 7.jpg)</p>
+<p>选择tomcat version 并填写Tomcat home的选项（/Library/Tomcat）,点击apply and close按钮.</p>
+<h3 id="配置server与tomcat"><a href="#配置server与tomcat" class="headerlink" title="配置server与tomcat"></a>配置server与tomcat</h3><p>展开Server选项 –&gt; Runtime Environments –&gt; Add.</p>
+<p>![](/Users/liruoyu/Documents/docs/media/在eclipse上配置Tomcat/在eclipse上配置Tomcat - 8.jpg)</p>
+<p>选择tomcat的版本.</p>
+<p>![](/Users/liruoyu/Documents/docs/media/在eclipse上配置Tomcat/在eclipse上配置Tomcat - 9.jpg)</p>
+<p>点击next,填写tomcat installation directory（tomcat安装路径）,同tomcat home.</p>
+<p>![](/Users/liruoyu/Documents/docs/media/在eclipse上配置Tomcat/在eclipse上配置Tomcat - 10.jpg)</p>
+<p>点击finish即可添加成功. </p>
 
             </div>
             <hr/>
@@ -446,7 +479,7 @@ hexo s</code></pre><p>此时可访问浏览器：<a href="http://localhost:4000/
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://runkie.github.io/2020/11/23/shu-ju-qian-yi/">http://runkie.github.io/2020/11/23/shu-ju-qian-yi/</a>
+                    <a href="http://runkie.github.io/2019/01/29/zai-eclipse-shang-pei-zhi-tomcat/">http://runkie.github.io/2019/01/29/zai-eclipse-shang-pei-zhi-tomcat/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -484,8 +517,12 @@ hexo s</code></pre><p>此时可访问浏览器：<a href="http://localhost:4000/
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Hexo/">
-                                    <span class="chip bg-color">Hexo</span>
+                                <a href="/tags/java/">
+                                    <span class="chip bg-color">java</span>
+                                </a>
+                            
+                                <a href="/tags/Tomcat/">
+                                    <span class="chip bg-color">Tomcat</span>
                                 </a>
                             
                         </div>
@@ -527,48 +564,49 @@ hexo s</code></pre><p>此时可访问浏览器：<a href="http://localhost:4000/
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/11/23/shu-ju-qian-yi/">
+                <a href="/2019/02/01/fullstack-academy-javase-module-1-task-2-bian-liang-he-shu-ju-lei-xing/">
                     <div class="card-image">
                         
+                        <img src="/../images/Fullstack%20Academy.jpg" class="responsive-img" alt="Fullstack Academy - JavaSE - Variables and Data types">
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="博客的迁移">
-                        
-                        <span class="card-title">博客的迁移</span>
+                        <span class="card-title">Fullstack Academy - JavaSE - Variables and Data types</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            重装系统或更换电脑时迁移博客
+                            变量与数据类型
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-23
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-02-01
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Development-Environment/" class="post-category">
-                                    Development Environment
+                            <a href="/categories/Fullstack-Academy/" class="post-category">
+                                    Fullstack Academy
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
+                    <a href="/tags/java/">
+                        <span class="chip bg-color">java</span>
+                    </a>
+                    
+                    <a href="/tags/Backend/">
+                        <span class="chip bg-color">Backend</span>
                     </a>
                     
                 </div>
@@ -582,23 +620,23 @@ hexo s</code></pre><p>此时可访问浏览器：<a href="http://localhost:4000/
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/05/01/fullstack-academy-javase-module-1-task-5-liu-cheng-kong-zhi-yu-ju/">
+                <a href="/2019/01/01/fullstack-academy-javase-module-1-task-1-ji-chu-zhi-shi/">
                     <div class="card-image">
                         
-                        <img src="/../images/Fullstack%20Academy.jpg" class="responsive-img" alt="Fullstack Academy - JavaSE - Flow Control">
+                        <img src="/../images/Fullstack%20Academy.jpg" class="responsive-img" alt="Fullstack Academy - JavaSE - Basic Knowledge">
                         
-                        <span class="card-title">Fullstack Academy - JavaSE - Flow Control</span>
+                        <span class="card-title">Fullstack Academy - JavaSE - Basic Knowledge</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            分支与循环
+                            基本概念
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-05-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-01-01
                             </span>
                         <span class="publish-author">
                             
