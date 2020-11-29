@@ -411,39 +411,33 @@
 </blockquote>
 <p>点击Help中的<code>Install New Software...</code></p>
 <p><img src="https://i.loli.net/2020/11/29/7gnoph3BCWuQO2S.png" alt=""></p>
-<p>点击<code>Add</code>按钮.名字不重要, 我的eclipse版本是mars.</p>
+<p>点击<code>Add</code>按钮.名字不重要, 我的eclipse版本是mars</p>
 <p><img src="https://i.loli.net/2020/11/29/hmo2dpESwKfxGJ4.png" alt=""></p>
-<p>勾选最后一个选项, 其他不用改, 一直点下一步就好.</p>
-<p>更新需要一点时间, 图标会有显示, 页面右下角也会有显示.更新完成后会提示重启, 点确定.</p>
+<p>勾选最后一个选项, 其他不用改, 一直点下一步就好</p>
+<p>更新需要一点时间, 图标会有显示, 页面右下角也会有显示.更新完成后会提示重启, 点确定</p>
 <p><img src="https://i.loli.net/2020/11/29/OyQKDfqo4hES3Ug.png" alt=""></p>
 <h3 id="下载Tomcat"><a href="#下载Tomcat" class="headerlink" title="下载Tomcat"></a>下载Tomcat</h3><p>通过<a href="https://tomcat.apache.org/download-80.cgi0" target="_blank" rel="noopener">官方网站</a>下载.(下载文件：mac下载 zip 和 tar.gz 都可)</p>
 <p>安装：压缩之后直接拷贝到资源库中.(在Machintosh HD&gt;资源库&gt;新建tomcat文件夹, 并将<code>apache-tomcat-x.0.90</code>中的内容复制到Tomcat中)</p>
-<h3 id="启动和关闭Tomcat"><a href="#启动和关闭Tomcat" class="headerlink" title="启动和关闭Tomcat"></a>启动和关闭Tomcat</h3><h4 id="启动Tomcat"><a href="#启动Tomcat" class="headerlink" title="启动Tomcat"></a>启动Tomcat</h4><p>进入Tomcat的bin目录.</p>
-<pre><code>cd /Library/Tomcat/bin</code></pre><p>授权bin目录下的所有操作.</p>
-<pre><code>sudo chmod 755 *.sh`</code></pre><p>开启Tomcat.</p>
+<h3 id="启动和关闭Tomcat"><a href="#启动和关闭Tomcat" class="headerlink" title="启动和关闭Tomcat"></a>启动和关闭Tomcat</h3><h4 id="启动Tomcat"><a href="#启动Tomcat" class="headerlink" title="启动Tomcat"></a>启动Tomcat</h4><p>进入Tomcat的bin目录</p>
+<pre><code>cd /Library/Tomcat/bin</code></pre><p>授权bin目录下的所有操作</p>
+<pre><code>sudo chmod 755 *.sh`</code></pre><p>开启Tomcat</p>
 <pre><code>sudo sh ./startup.sh`</code></pre><p><img src="https://i.loli.net/2020/11/29/CnN1avwW9LM6Uqo.jpg" alt=""></p>
-<p>在浏览器地址栏输入<code>http://localhost:8080</code>显示如下界面代表开启成功.</p>
+<p>在浏览器地址栏输入<code>http://localhost:8080</code>显示如下界面代表开启成功</p>
 <p><img src="https://i.loli.net/2020/11/29/9krs67gmjUHunWo.jpg" alt=""></p>
-<h4 id="关闭Tomcat"><a href="#关闭Tomcat" class="headerlink" title="关闭Tomcat"></a>关闭Tomcat</h4><pre><code>`sh ./shutdown.sh`</code></pre><h2 id="配置Tomcat在eclipse的插件"><a href="#配置Tomcat在eclipse的插件" class="headerlink" title="配置Tomcat在eclipse的插件"></a>配置Tomcat在eclipse的插件</h2><h4 id="下载插件"><a href="#下载插件" class="headerlink" title="下载插件"></a>下载插件</h4><p>下载<a href="https://sourceforge.net/projects/tomcatplugin/" target="_blank" rel="noopener">插件</a>并解压.</p>
-<h4 id="配置插件"><a href="#配置插件" class="headerlink" title="配置插件"></a>配置插件</h4><p>点击Help下的<code>install new software</code>.</p>
+<h4 id="关闭Tomcat"><a href="#关闭Tomcat" class="headerlink" title="关闭Tomcat"></a>关闭Tomcat</h4><pre><code>`sh ./shutdown.sh`</code></pre><h2 id="配置Tomcat在eclipse的插件"><a href="#配置Tomcat在eclipse的插件" class="headerlink" title="配置Tomcat在eclipse的插件"></a>配置Tomcat在eclipse的插件</h2><h4 id="下载插件"><a href="#下载插件" class="headerlink" title="下载插件"></a>下载插件</h4><p>下载<a href="https://sourceforge.net/projects/tomcatplugin/" target="_blank" rel="noopener">插件</a>并解压</p>
+<h4 id="配置插件"><a href="#配置插件" class="headerlink" title="配置插件"></a>配置插件</h4><p>点击Help下的<code>install new software</code></p>
 <p><img src="https://i.loli.net/2020/11/29/q4sfDmlxop6Z8vW.jpg" alt=""></p>
-<ol start="2">
-<li><p>按顺序点击<code>add&gt;local&gt;</code>选择刚才解压的文件夹, name栏自行随意填写.</p>
-</li>
-<li><p>一路next, 完成以后重启Eclipse. 完成后会在<code>Eclipse&gt;preferences</code>下看到tomcat. </p>
-</li>
-</ol>
+<p>按顺序点击<code>add&gt;local&gt;</code>选择刚才解压的文件夹, name栏自行随意填写</p>
+<p>一路next, 完成以后重启Eclipse. 完成后会在<code>Eclipse&gt;preferences</code>下看到tomcat</p>
 <p><img src="https://i.loli.net/2020/11/29/5oE3g81Cz4BGenS.jpg" alt=""></p>
-<ol start="4">
-<li>选择<code>Tomcat version</code>并填写Tomcat home的选项(/Library/Tomcat), 点击<code>apply and close</code>按钮.</li>
-</ol>
-<h3 id="配置server与tomcat"><a href="#配置server与tomcat" class="headerlink" title="配置server与tomcat"></a>配置server与tomcat</h3><p>按顺序点击<code>Server&gt;Runtime Environments&gt;Add</code>.</p>
+<p>选择<code>Tomcat version</code>并填写Tomcat home的选项(/Library/Tomcat), 点击<code>apply and close</code>按钮</p>
+<h3 id="配置server与tomcat"><a href="#配置server与tomcat" class="headerlink" title="配置server与tomcat"></a>配置server与tomcat</h3><p>按顺序点击<code>Server&gt;Runtime Environments&gt;Add</code></p>
 <p><img src="https://i.loli.net/2020/11/29/ZdvyEzj4Qr8RfXt.jpg" alt=""></p>
-<p>选择tomcat的版本.</p>
+<p>选择tomcat的版本</p>
 <p><img src="https://i.loli.net/2020/11/29/3CRJGhjX5ziBeKP.jpg" alt=""></p>
-<p>点击<code>next</code>并填写<code>tomcat installation directory</code>(tomcat安装路径).</p>
+<p>点击<code>next</code>并填写<code>tomcat installation directory</code>(tomcat安装路径)</p>
 <p><img src="https://i.loli.net/2020/11/29/rlXnDchawM5S1J4.jpg" alt=""></p>
-<p>点击<code>finish</code>即可添加成功.</p>
+<p>点击<code>finish</code>即可添加成功</p>
 
             </div>
             <hr/>
