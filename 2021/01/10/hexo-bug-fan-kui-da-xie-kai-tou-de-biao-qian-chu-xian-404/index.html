@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo + Github Page 搭建个人博客, Ruoyu">
+    <meta name="keywords" content="HEXO-BUG反馈：大写开头的标签出现404, Ruoyu">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hexo + Github Page 搭建个人博客 | Ruoyu</title>
+    <title>HEXO-BUG反馈：大写开头的标签出现404 | Ruoyu</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -221,7 +221,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <!-- <div class="brand">
-                    <h1 class="description center-align post-title">Hexo + Github Page 搭建个人博客</h1>
+                    <h1 class="description center-align post-title">HEXO-BUG反馈：大写开头的标签出现404</h1>
                 </div> -->
             </div>
         </div>
@@ -346,10 +346,6 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Blog/">
-                                <span class="chip bg-color">Blog</span>
-                            </a>
-                        
                             <a href="/tags/HEXO/">
                                 <span class="chip bg-color">HEXO</span>
                             </a>
@@ -379,7 +375,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-01-01
+                    2021-01-10
                 </div>
                 
 
@@ -388,14 +384,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    826
+                    422
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    1 分
                 </div>
                 
 
@@ -410,72 +406,24 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="liruoyu.tech">My Blog</a>! This is my very first post. This Blog will show you how to <strong>Setup a Blog</strong> by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> and <a href="https://pages.github.com/" target="_blank" rel="noopener">Github Pages</a>!</p>
-<h3 id="什么是Hexo？"><a href="#什么是Hexo？" class="headerlink" title="什么是Hexo？"></a>什么是Hexo？</h3><blockquote>
-<p>Hexo是一个快速、简洁且高效的博客框架Hexo使用Markdown(或其他渲染引擎)解析文章, 在几秒内, 即可利用靓丽的主题生成静态网页<br>Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info.<br>如果你有关于任何Hexo的疑问, 也可以在<a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">问题定位</a>查询答案或者在<a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>询问作者</p>
-</blockquote>
-<h3 id="基础环境整备"><a href="#基础环境整备" class="headerlink" title="基础环境整备"></a>基础环境整备</h3><p>因为Hexo是基于Node.js驱动的一款博客框架, 因此首先需要安装<a href="https://nodejs.org/en/" target="_blank" rel="noopener">NodeJS</a></p>
-<p>安装完成后为了方便部署博客到 Github 上还需要安装<a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a></p>
-<p>这一步骤比较简单, 在此不多赘述</p>
-<p>安装后输入相应命令验证是否安装成功, 如果成功会出现相应的版本号</p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">git</span> version
-$ node -v
-$ <span class="token function">npm</span> -v</code></pre>
-<h3 id="安装并调试Hexo"><a href="#安装并调试Hexo" class="headerlink" title="安装并调试Hexo"></a>安装并调试Hexo</h3><p>在命令行输入以下命令</p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">npm</span> <span class="token function">install</span> -g hexo-cli</code></pre>
-<p>安装后再依次执行以下命令建立博客必须的文件环境</p>
-<pre class=" language-bash"><code class="language-bash">$ hexo init myBlog
-$ <span class="token function">cd</span> myBlog
-$ <span class="token function">npm</span> <span class="token function">install</span></code></pre>
-<p>如果上述的命令在执行过程中都没有报错的话, 执行以下命令</p>
-<pre class=" language-bash"><code class="language-bash">$ hexo s</code></pre>
-<p>在浏览器中访问<code>http://localhost:4000</code>就可以预览效果了</p>
-<h3 id="部署到Github-Pages上"><a href="#部署到Github-Pages上" class="headerlink" title="部署到Github Pages上"></a>部署到Github Pages上</h3><h4 id="新建仓库"><a href="#新建仓库" class="headerlink" title="新建仓库"></a>新建仓库</h4><blockquote>
-<p>前提：已拥有Github账户</p>
-</blockquote>
-<p>点击<code>Start project</code>或<code>new repository</code> 创建一个新的仓库</p>
-<p><strong>注意: Github仅能使用一个同名仓库的代码托管一个静态站点</strong></p>
-<p><img src="https://i.loli.net/2020/11/29/9UkKH6Mm32eALwa.png" alt="github命名.png"></p>
-<h4 id="配置SSH-Key"><a href="#配置SSH-Key" class="headerlink" title="配置SSH Key"></a>配置SSH Key</h4><p>使用git配置SSH key, 为部署本地博客到Github做准备</p>
-<p>在命令行执行以下命令确认是否生成过<code>SSH Key</code> </p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">cd</span> ~/.ssh</code></pre>
-<p>如果没报错则说明以前生成过</p>
-<ul>
-<li><p>生成过</p>
-<p>执行以下命令查看本机生成过的SSH Key</p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">cat</span> ~/.ssh/id_rsa.pub</code></pre>
-</li>
-<li><p>未生成过</p>
-<p>执行以下命令全局配置本地账户</p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">git</span> config --global user.name <span class="token string">"用户名"</span>
-$ <span class="token function">git</span> config --global user.email <span class="token string">"邮箱地址"</span></code></pre>
-<p>生成密钥SSH key</p>
-<pre class=" language-bash"><code class="language-bash">$ ssh-keygen -t rsa -C <span class="token string">'上面的邮箱'</span></code></pre>
-<p>查看生成的SSH Key</p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">cat</span> ~/.ssh/id_rsa.pub</code></pre>
-<p>首次使用还需要执行以下命令以确认并添加主机到本机SSH可信列表</p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">ssh</span> -T git@github.com</code></pre>
-<p>若返回<code>Hi xxx! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code>则证明添加成功</p>
-</li>
-</ul>
-<h4 id="添加SSH-Key到Github"><a href="#添加SSH-Key到Github" class="headerlink" title="添加SSH Key到Github"></a>添加SSH Key到Github</h4><p><img src="https://i.loli.net/2020/11/29/6GZkMUQuNwhvbL2.png" alt="SSH Key 配置到 Github.png"></p>
-<p>创建一个新的SSH key, 标题自由, key则填写上一步骤生成的SSH Key, 点击<code>Add GPG key</code></p>
-<p><img src="https://i.loli.net/2020/11/29/4SPVqDsrIbZgY9A.png" alt="添加 SSH Key.png"></p>
-<h4 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h4><p>打开项目根目录下的<code>_config.yml</code>配置文件配置以下参数</p>
-<p><img src="https://i.loli.net/2020/11/29/z63VJRqfSwLI7Ht.png" alt="github本地配置.png"></p>
-<p>执行以下命令安装部署插件</p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git --save</code></pre>
-<p>执行以下命令后部署完成</p>
-<pre class=" language-bash"><code class="language-bash">$ hexo g -d</code></pre>
-<h3 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h3><blockquote>
-<p>前提：已拥有实名认证过的域名此过程可在<a href="https://cn.aliyun.com/" target="_blank" rel="noopener">万网</a>完成</p>
-</blockquote>
-<h4 id="解析域名"><a href="#解析域名" class="headerlink" title="解析域名"></a>解析域名</h4><p>登录控制台后找到你的域名, 点右侧的解析按钮进入解析列表</p>
-<p>添加以下两条<code>CNAME</code> 类型的记录</p>
-<p><img src="https://i.loli.net/2020/11/29/e2xMi7cFNUbVwCA.png" alt="解析域名.png"></p>
-<h4 id="在Github中绑定"><a href="#在Github中绑定" class="headerlink" title="在Github中绑定"></a>在Github中绑定</h4><p>在博客仓库的设置中找到<code>Github Pages</code>并进行以下设定后, 博客搭建完成</p>
-<p><img src="https://i.loli.net/2020/11/29/uBJ186e7hnyFT9j.png" alt="绑定域名.png"></p>
-<h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><p><a href="https://segmentfault.com/a/1190000017986794" target="_blank" rel="noopener">超详细Hexo+Github Page搭建技术博客教程</a><br><a href="https://www.jianshu.com/p/eded1dd2d794" target="_blank" rel="noopener">如何搭建个人博客 ？Hexo + GitHub 是一个不错的选择</a><br><a href="https://www.jianshu.com/p/189fd945f38f" target="_blank" rel="noopener">搭建个人博客-hexo+github详细完整步骤</a><br><a href="https://www.jianshu.com/p/465830080ea9" target="_blank" rel="noopener">HEXO+Github,搭建属于自己的博客</a><br><a href="https://www.jianshu.com/p/d6ef5f02ea18" target="_blank" rel="noopener">用 Github 绑定域名的方法</a></p>
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>突然发现我的标签页面很多个 tag 页面打开都是 404 报错。<br>对多个 tag 查了之后才发现，问题应该是出现在大小写上。</p>
+<h2 id="调查过程"><a href="#调查过程" class="headerlink" title="调查过程"></a>调查过程</h2><p>本地运行 <code>hexo s</code> 时标签页面运行正常，大小写标签都可以正常访问，而在服务器上运行时则出现了 404 错误。</p>
+<p>原来 <strong>Git</strong> 默认设置了大小写不敏感，因此当你在本地新建了一个 a.txt 的文件并提交后，又把这个文件重命名为了 A.txt。这个时候你就会出现无法提交的情况。因为 Git 默认你的文件大小写不影响，所以你的服务器上只有一个 a.txt 存在。</p>
+<p>到了我们这个现实的例子上就是原本有个 tag 页面名为 git，当改名成为 Git 时你会发现当本地运行  <code>hexo s</code> 时，查看这个 Git 页面是没问题的，但是到了服务器上就会出现 404 报错。而此时当你查看 git 这个页面的时侯又没有问题了。</p>
+<p>知道了原理就好解决了。</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>修改 git 设置不忽略大小写</p>
+<p>进入博客文件夹，进入 git 目录：<strong>.deploy_git</strong> ，修改 .git 文件中的配置文件 config，将ignorecase 从 true 改为 false</p>
+<pre><code>vim . deploy_git/.git/config
+- ignorecase = true
++ ignorecase = false</code></pre><p>如果还没有解决，清空部署到 github 上的文件，重新发布：</p>
+<pre><code>cd .deploy_git
+git rm -rf *
+git commit -m &#39;clean all file&#39;
+git push</code></pre><p>进入博客文件夹，用 hexo 重新生成部署</p>
+<pre><code>hexo clean
+hexo g
+hexo d</code></pre><p>问题解决。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://github.com/hexojs/hexo/issues/818" target="_blank" rel="noopener">BUG反馈：大写开头的标签出现404</a></p>
 
             </div>
             <hr/>
@@ -501,7 +449,7 @@ $ <span class="token function">git</span> config --global user.email <span class
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://runkie.github.io/2019/01/01/hexo-github-page-da-jian-ge-ren-bo-ke/">http://runkie.github.io/2019/01/01/hexo-github-page-da-jian-ge-ren-bo-ke/</a>
+                    <a href="http://runkie.github.io/2021/01/10/hexo-bug-fan-kui-da-xie-kai-tou-de-biao-qian-chu-xian-404/">http://runkie.github.io/2021/01/10/hexo-bug-fan-kui-da-xie-kai-tou-de-biao-qian-chu-xian-404/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -538,10 +486,6 @@ $ <span class="token function">git</span> config --global user.email <span class
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/Blog/">
-                                    <span class="chip bg-color">Blog</span>
-                                </a>
                             
                                 <a href="/tags/HEXO/">
                                     <span class="chip bg-color">HEXO</span>
@@ -590,49 +534,51 @@ $ <span class="token function">git</span> config --global user.email <span class
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/01/01/fullstack-academy-javase-module-1-task-1-ji-ben-gai-nian/">
+                <a href="/2021/01/10/hexo-bug-fan-kui-da-xie-kai-tou-de-biao-qian-chu-xian-404/">
                     <div class="card-image">
                         
-                        <img src="/../images/Fullstack%20Academy.jpg" class="responsive-img" alt="Fullstack Academy - JavaSE - Basic Knowledge">
+                        <img src="/../images/Blog.jpg" class="responsive-img" alt="HEXO-BUG反馈：大写开头的标签出现404">
                         
-                        <span class="card-title">Fullstack Academy - JavaSE - Basic Knowledge</span>
+                        <span class="card-title">HEXO-BUG反馈：大写开头的标签出现404</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            基本概念
+                            解决分类或标签单词首字母大写导致的404问题
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-01-01
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Fullstack-Academy/" class="post-category">
-                                    Fullstack Academy
+                            <a href="/categories/HEXO/" class="post-category">
+                                    HEXO
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
+                    <a href="/tags/HEXO/">
+                        <span class="chip bg-color">HEXO</span>
                     </a>
                     
-                    <a href="/tags/JavaSE/">
-                        <span class="chip bg-color">JavaSE</span>
+                    <a href="/tags/Git/">
+                        <span class="chip bg-color">Git</span>
                     </a>
                     
                 </div>
@@ -646,30 +592,30 @@ $ <span class="token function">git</span> config --global user.email <span class
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/01/01/shi-yong-git-ming-ling-top10/">
+                <a href="/2021/01/01/bo-ke-de-qian-yi/">
                     <div class="card-image">
                         
-                        <img src="/../images/Git.jpg" class="responsive-img" alt="实用git命令Top10">
+                        <img src="/../images/Blog.jpg" class="responsive-img" alt="博客的迁移">
                         
-                        <span class="card-title">实用git命令Top10</span>
+                        <span class="card-title">博客的迁移</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            常用git命令
+                            重装系统或更换电脑时迁移博客
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-01-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-01
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Git/" class="post-category">
-                                    Git
+                            <a href="/categories/HEXO/" class="post-category">
+                                    HEXO
                                 </a>
                             
                             
@@ -679,8 +625,12 @@ $ <span class="token function">git</span> config --global user.email <span class
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Git/">
-                        <span class="chip bg-color">Git</span>
+                    <a href="/tags/Blog/">
+                        <span class="chip bg-color">Blog</span>
+                    </a>
+                    
+                    <a href="/tags/HEXO/">
+                        <span class="chip bg-color">HEXO</span>
                     </a>
                     
                 </div>
