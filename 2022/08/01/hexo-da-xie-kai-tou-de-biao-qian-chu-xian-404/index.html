@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="HEXO-BUG反馈：大写开头的标签出现404, Ruoyu">
+    <meta name="keywords" content="HEXO：大写开头的标签出现404, Ruoyu">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>HEXO-BUG反馈：大写开头的标签出现404 | Ruoyu</title>
+    <title>HEXO：大写开头的标签出现404 | Ruoyu</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -216,12 +216,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/../images/Blog.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <!-- <div class="brand">
-                    <h1 class="description center-align post-title">HEXO-BUG反馈：大写开头的标签出现404</h1>
+                    <h1 class="description center-align post-title">HEXO：大写开头的标签出现404</h1>
                 </div> -->
             </div>
         </div>
@@ -344,29 +344,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/HEXO/">
-                                <span class="chip bg-color">HEXO</span>
-                            </a>
-                        
-                            <a href="/tags/Git/">
-                                <span class="chip bg-color">Git</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/HEXO/" class="post-category">
-                                HEXO
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -375,7 +358,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-10
+                    2022-08-01
                 </div>
                 
 
@@ -384,7 +367,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    422
+                    461
                 </div>
                 
 
@@ -406,16 +389,19 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>突然发现我的标签页面很多个 tag 页面打开都是 404 报错。<br>对多个 tag 查了之后才发现，问题应该是出现在大小写上。</p>
+                <h1 id="HEXO-BUG反馈：大写开头的标签出现404"><a href="#HEXO-BUG反馈：大写开头的标签出现404" class="headerlink" title="HEXO-BUG反馈：大写开头的标签出现404"></a>HEXO-BUG反馈：大写开头的标签出现404</h1><hr>
+<p>title: HEXO-BUG反馈：大写开头的标签出现404<br>date: 2021-01-10 00:00:00<br>img: ../images/Blog.jpg<br>summary: 解决分类或标签首字母大写导致的404问题<br>categories: HEXO<br>tags: [HEXO, Git]</p>
+<hr>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>突然发现我的多个标签页面页面打开都是 404 报错。<br>调查之后发现，问题应该是出现在大小写上。</p>
 <h2 id="调查过程"><a href="#调查过程" class="headerlink" title="调查过程"></a>调查过程</h2><p>本地运行 <code>hexo s</code> 时标签页面运行正常，大小写标签都可以正常访问，而在服务器上运行时则出现了 404 错误。</p>
-<p>原来 <strong>Git</strong> 默认设置了大小写不敏感，因此当你在本地新建了一个 a.txt 的文件并提交后，又把这个文件重命名为了 A.txt。这个时候你就会出现无法提交的情况。因为 Git 默认你的文件大小写不影响，所以你的服务器上只有一个 a.txt 存在。</p>
-<p>到了我们这个现实的例子上就是原本有个 tag 页面名为 git，当改名成为 Git 时你会发现当本地运行  <code>hexo s</code> 时，查看这个 Git 页面是没问题的，但是到了服务器上就会出现 404 报错。而此时当你查看 git 这个页面的时侯又没有问题了。</p>
+<p>原来 <strong>Git</strong> 默认设置了大小写不敏感，因此当你在本地新建了一个 a.txt 并提交，之后又把这个文件重命名为了 A.txt 时就会出现无法提交的情况。因为 Git 默认你的文件大小写不影响，所以你的服务器上只有一个 a.txt 存在。</p>
+<p>到了我们这个例子上就是原本有个 tag 页面名为 git，当改名成为 Git 时你会发现本地运行时，查看这个 Git 页面是没问题的，但是到了服务器上就会出现 404 报错。而此时当你更改 URL 为 git 时这个页面又正常显示了。</p>
 <p>知道了原理就好解决了。</p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>修改 git 设置不忽略大小写</p>
-<p>进入博客文件夹，进入 git 目录：<strong>.deploy_git</strong> ，修改 .git 文件中的配置文件 config，将ignorecase 从 true 改为 false</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>修改 git 为不忽略大小写。</p>
+<p>进入博客文件夹，进入 git 目录：<strong>.deploy_git</strong> ，修改 .git 文件中的配置文件 config，将<code>ignorecase</code> 从 true 改为 false</p>
 <pre><code>vim . deploy_git/.git/config
 - ignorecase = true
-+ ignorecase = false</code></pre><p>如果还没有解决，清空部署到 github 上的文件，重新发布：</p>
++ ignorecase = false</code></pre><p>如果还没有解决，清空部署到 github 上的文件，重新发布</p>
 <pre><code>cd .deploy_git
 git rm -rf *
 git commit -m &#39;clean all file&#39;
@@ -449,7 +435,7 @@ hexo d</code></pre><p>问题解决。</p>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://runkie.github.io/2021/01/10/hexo-bug-fan-kui-da-xie-kai-tou-de-biao-qian-chu-xian-404/">http://runkie.github.io/2021/01/10/hexo-bug-fan-kui-da-xie-kai-tou-de-biao-qian-chu-xian-404/</a>
+                    <a href="http://runkie.github.io/2022/08/01/hexo-da-xie-kai-tou-de-biao-qian-chu-xian-404/">http://runkie.github.io/2022/08/01/hexo-da-xie-kai-tou-de-biao-qian-chu-xian-404/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -486,15 +472,7 @@ hexo d</code></pre><p>问题解决。</p>
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/HEXO/">
-                                    <span class="chip bg-color">HEXO</span>
-                                </a>
-                            
-                                <a href="/tags/Git/">
-                                    <span class="chip bg-color">Git</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -539,7 +517,46 @@ hexo d</code></pre><p>问题解决。</p>
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2021/01/10/hexo-bug-fan-kui-da-xie-kai-tou-de-biao-qian-chu-xian-404/">
+                <a href="/2022/08/01/hexo-da-xie-kai-tou-de-biao-qian-chu-xian-404/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="HEXO：大写开头的标签出现404">
+                        
+                        <span class="card-title">HEXO：大写开头的标签出现404</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            HEXO-BUG反馈：大写开头的标签出现404
+title: HEXO-BUG反馈：大写开头的标签出现404date: 2021-01-10 00:00:00img: ../images/Blog.jpgsummary: 解决分类或标签首字
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Ruoyu Li
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/01/10/16591735724513/">
                     <div class="card-image">
                         
                         <img src="/../images/Blog.jpg" class="responsive-img" alt="HEXO-BUG反馈：大写开头的标签出现404">
@@ -550,7 +567,7 @@ hexo d</code></pre><p>问题解决。</p>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            解决分类或标签单词首字母大写导致的404问题
+                            解决分类或标签首字母大写导致的404问题
                         
                     </div>
                     <div class="publish-info">
@@ -569,7 +586,6 @@ hexo d</code></pre><p>问题解决。</p>
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -579,54 +595,6 @@ hexo d</code></pre><p>问题解决。</p>
                     
                     <a href="/tags/Git/">
                         <span class="chip bg-color">Git</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/01/01/bo-ke-de-qian-yi/">
-                    <div class="card-image">
-                        
-                        <img src="/../images/Blog.jpg" class="responsive-img" alt="博客的迁移">
-                        
-                        <span class="card-title">博客的迁移</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            重装系统或更换电脑时迁移博客
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-01
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/HEXO/" class="post-category">
-                                    HEXO
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/HEXO/">
-                        <span class="chip bg-color">HEXO</span>
                     </a>
                     
                 </div>
@@ -816,7 +784,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">25.5k</span>&nbsp;字
+                class="white-color">25.9k</span>&nbsp;字
             
             
             
