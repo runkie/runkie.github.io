@@ -406,7 +406,8 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>突然发现我的多个标签页面页面打开都是 404 报错。<br>调查之后发现，问题应该是出现在大小写上。</p>
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>突然发现我的多个标签页面页面打开都是 404 报错。</p>
+<p>调查之后发现，问题应该是出现在大小写上。</p>
 <h2 id="调查过程"><a href="#调查过程" class="headerlink" title="调查过程"></a>调查过程</h2><p>本地运行 <code>hexo s</code> 时标签页面运行正常，大小写标签都可以正常访问，而在服务器上运行时则出现了 404 错误。</p>
 <p>原来 <strong>Git</strong> 默认设置了大小写不敏感，因此当你在本地新建了一个 a.txt 并提交，之后又把这个文件重命名为了 A.txt 时就会出现无法提交的情况。因为 Git 默认你的文件大小写不影响，所以你的服务器上只有一个 a.txt 存在。</p>
 <p>到了我们这个例子上就是原本有个 tag 页面名为 git，当改名成为 Git 时你会发现本地运行时，查看这个 Git 页面是没问题的，但是到了服务器上就会出现 404 报错。而此时当你更改 URL 为 git 时这个页面又正常显示了。</p>
